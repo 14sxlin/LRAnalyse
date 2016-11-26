@@ -1,0 +1,50 @@
+I0  :  S -> .E  E -> .aA  E -> .bB  
+I1  :  S -> E.  
+I2  :  E -> a.A  A -> .cA  A -> .d  
+I3  :  E -> b.B  B -> .cB  B -> .d  
+I4  :  E -> aA.  
+I5  :  A -> c.A  A -> .cA  A -> .d  
+I6  :  A -> d.  
+I7  :  E -> bB.  
+I8  :  B -> c.B  B -> .cB  B -> .d  
+I9  :  B -> d.  
+I10  :  A -> cA.  
+I11  :  B -> cB.  
+
+from:   0 to:  1 input:  E do    移进
+from:   0 to:  2 input:  a do    移进
+from:   0 to:  3 input:  b do    移进
+from:   2 to:  4 input:  A do    移进
+from:   2 to:  5 input:  c do    移进
+from:   2 to:  6 input:  d do    移进
+from:   3 to:  7 input:  B do    移进
+from:   3 to:  8 input:  c do    移进
+from:   3 to:  9 input:  d do    移进
+from:   5 to: 10 input:  A do    移进
+from:   5 to:  5 input:  c do    移进
+from:   5 to:  6 input:  d do    移进
+from:   8 to: 11 input:  B do    移进
+from:   8 to:  8 input:  c do    移进
+from:   8 to:  9 input:  d do    移进
+
+from :   4  to:  -1  use :   1
+from :   6  to:  -1  use :   4
+from :   7  to:  -1  use :   2
+from :   9  to:  -1  use :   6
+from :  10  to:  -1  use :   3
+from :  11  to:  -1  use :   5
+
+
+         a    b    c    d    #    E    A    B
+   I0  s2~  s3~   @~   @~   @~  s1~   @~   @~
+   I1   @~   @~   @~   @~   A~   @~   @~   @~
+   I2   @~   @~  s5~  s6~   @~   @~  s4~   @~
+   I3   @~   @~  s8~  s9~   @~   @~   @~  s7~
+   I4  r1~  r1~  r1~  r1~  r1~   @~   @~   @~
+   I5   @~   @~  s5~  s6~   @~   @~ s10~   @~
+   I6  r4~  r4~  r4~  r4~  r4~   @~   @~   @~
+   I7  r2~  r2~  r2~  r2~  r2~   @~   @~   @~
+   I8   @~   @~  s8~  s9~   @~   @~   @~ s11~
+   I9  r6~  r6~  r6~  r6~  r6~   @~   @~   @~
+  I10  r3~  r3~  r3~  r3~  r3~   @~   @~   @~
+  I11  r5~  r5~  r5~  r5~  r5~   @~   @~   @~

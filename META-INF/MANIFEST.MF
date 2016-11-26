@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: lib/scala-compiler.jar
+Main-Class: lin.Main
+
